@@ -1,0 +1,17 @@
+{
+  "name": "dolphinspired.github.io",
+  "version": "1.0.0",
+  "description": "A simple Github Pages site",
+  "author": "dolphinspired",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolphinspired/dolphinspired.github.io.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
