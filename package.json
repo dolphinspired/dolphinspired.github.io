@@ -1,0 +1,21 @@
+{
+  "name": "dolphinspired.github.io",
+  "version": "1.0.0",
+  "description": "Playground for fun experiments 🧪",
+  "homepage": "https://nuffle.me",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolphinspired/dolphinspired.github.io.git"
+  },
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf .parcel-cache dist",
+    "serve": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4",
+    "typescript": "^5.9.2"
+  }
+}

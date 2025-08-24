@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/webp">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+        <link rel="icon" href="assets/images/favicon.png" type="image/webp">
+        <title>Nuffle!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+        <script type="module" src="index.ts"></script>
+    </head>
+    <body>
+        <!-- Snowfall Background Animation -->
+        <section class="animated-background">
+            <div id="stars1"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </section>
+        <!-- End of Snowfall Background Animation -->
+
+        <div class="min-h-full flex-h-center" id="background_div">
+            <input type="hidden" value="https://bio.link" id="app-url">
+                <input type="hidden" value="null" id="is-featured">
+                    <canvas id="bg-canvas" class="background-overlay"></canvas>
+                </input>
+            </input>
+
+            <div class="mt-48 page-full-wrap relative">
+                <input type="hidden" value="creator-page" id="page-type">
+                <img class="display-image m-auto" data-src="assets/images/profile.png" src="assets/images/profile.png" alt="Nuffle Emberdrake"/>
+                <h2 class="page-title page-text-color page-text-font mt-16 text-center">Nuffle Emberdrake</h2>
+                <h3 class="page-bioline page-text-color page-text-font mt-4 text-center">Magical goat-dragon made of hugs 🐐🐉❤️‍🔥</h3>
+
+                <div id="navTiles" class="mt-24"></div>
+            </div>
+        </div>
+    </body>
+</html>
