@@ -1,3 +1,9 @@
 #profile-image {
   cursor: pointer;
 }
+
+.nav-special {
+  /* shiny gold color */
+  background: linear-gradient(270deg, #FFD700, #fffde7, #FFD700);
+  border: 2px solid #FFA500;
+}

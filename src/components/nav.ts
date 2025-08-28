@@ -1,13 +1,26 @@
 import { cdn } from "./cdn";
+import { hasQueryParam } from "./qstr";
 
 type NavTileConfig = {
   name: string;
   label: string;
   href: string;
   image: URL;
+  className?: string;
+  addDivider?: boolean;
+  condition?: () => boolean;
 };
 
 const navTiles: NavTileConfig[] = [
+  {
+    name: "Plushie Party",
+    href: "https://t.me/+EoyUaEVGaII2YjJh",
+    image: new URL("https://i.giphy.com/Vt4wDrLAnH1tu.webp"),
+    label: "🐬 lo-fi plushie beats 🧸 to relax/cuddle to ❤️\n(FSC 2025)",
+    className: "nav-special",
+    addDivider: true,
+    condition: () => hasQueryParam("plushie", "true"),
+  },
   {
     name: "Bluesky",
     href: "https://bsky.app/profile/nuffle.me",
@@ -42,9 +55,10 @@ const navTiles: NavTileConfig[] = [
 
 export const renderNavTiles = (): string => {
   return navTiles
-    .map(
-      (item) => `
-<div class="page-item-wrap relative">
+    .filter((item) => (item.condition ? item.condition() : true))
+    .map((item) => {
+        let content = `
+<div class="page-item-wrap relative ${item.className ?? ""}">
   <div class="page-item flex-both-center absolute"></div>
   <a target="_blank" class="page-item-each py-10 flex-both-center" href="${item.href}">
     <img class="link-each-image" src="${item.image}" alt="${item.name}"/>
@@ -52,6 +66,11 @@ export const renderNavTiles = (): string => {
   </a>
 </div>
 `
+        if (item.addDivider) {
+          content = content + `<hr />`;
+        }
+        return content;
+      }
     )
     .join("");
 }
