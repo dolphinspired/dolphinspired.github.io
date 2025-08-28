@@ -11,7 +11,7 @@
   "scripts": {
     "build": "parcel build src/index.html",
     "clean": "rm -rf .parcel-cache dist",
-    "predeploy": "npm run build && cp CNAME dist",
+    "predeploy": "npm run clean && npm run build && cp CNAME dist",
     "deploy": "gh-pages -d dist",
     "serve": "parcel src/index.html"
   },
