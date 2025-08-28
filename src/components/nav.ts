@@ -1,4 +1,4 @@
-import * as images from "./images";
+import { cdn } from "./cdn";
 
 type NavTileConfig = {
   name: string;
@@ -11,31 +11,31 @@ const navTiles: NavTileConfig[] = [
   {
     name: "Bluesky",
     href: "https://bsky.app/profile/nuffle.me",
-    image: images.bluesky,
+    image: cdn("site/logo/bluesky.png"),
     label: "@nuffle.me on Bluesky",
   },
   {
     name: "Telegram",
     href: "https://t.me/dolphinspired",
-    image: images.telegram,
+    image: cdn("site/logo/telegram.png"),
     label: "@dolphinspired on Telegram",
   },
   {
     name: "Toyhouse",
     href: "https://toyhou.se/25234327.nuffle-emberdrake",
-    image: images.toyhouse,
+    image: cdn("site/logo/toyhouse.png"),
     label: "Nuffle on Toyhouse",
   },
   {
     name: "Furtrack",
     href: "https://www.furtrack.com/index/character:nuffle",
-    image: images.furtrack,
+    image: cdn("site/logo/furtrack.png"),
     label: "Nuffle on Furtrack",
   },
   {
     name: "Github",
     href: "https://github.com/dolphinspired",
-    image: images.github,
+    image: cdn("site/logo/github.png"),
     label: "dolphinspired on Github",
   },
 ];
