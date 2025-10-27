@@ -22,6 +22,19 @@ const navTiles: NavTileConfig[] = [
     condition: () => hasQueryParam("plushie", "true"),
   },
   {
+    name: "Dolphinspired Studio",
+    href: "https://dolphinspired.com",
+    image: cdn("site/logo/dolphinspired.png"),
+    label: "dolphinspired.com - My Store!",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/dolphinspired/",
+    image: cdn("site/logo/instagram.png"),
+    label: "@dolphinspired on Instagram",
+    addDivider: true,
+  },
+  {
     name: "Bluesky",
     href: "https://bsky.app/profile/nuffle.me",
     image: cdn("site/logo/bluesky.png"),
