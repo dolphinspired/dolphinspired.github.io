@@ -14,9 +14,9 @@ type NavTileConfig = {
 const navTiles: NavTileConfig[] = [
   {
     name: "Plushie Party",
-    href: "https://t.me/+EoyUaEVGaII2YjJh",
+    href: "https://t.me/+2GVVUR_YLUxjNzEx",
     image: new URL("https://i.giphy.com/Vt4wDrLAnH1tu.webp"),
-    label: "🐬 lo-fi plushie beats 🧸 to relax/cuddle to ❤️\n(FSC 2025)",
+    label: "Plushie Party Invite (CFF 2025)",
     className: "nav-special",
     addDivider: true,
     condition: () => hasQueryParam("plushie", "true"),
@@ -25,7 +25,7 @@ const navTiles: NavTileConfig[] = [
     name: "Dolphinspired Studio",
     href: "https://dolphinspired.com",
     image: cdn("site/logo/dolphinspired.png"),
-    label: "dolphinspired.com - My Store!",
+    label: "dolphinspired.com - My Studio & Store!",
   },
   {
     name: "Instagram",
