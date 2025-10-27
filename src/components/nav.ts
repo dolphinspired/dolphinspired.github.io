@@ -16,7 +16,7 @@ const navTiles: NavTileConfig[] = [
     name: "Plushie Party",
     href: "https://t.me/+2GVVUR_YLUxjNzEx",
     image: new URL("https://i.giphy.com/Vt4wDrLAnH1tu.webp"),
-    label: "Plushie Party Invite (CFF 2025)",
+    label: "🎊 Plushie Party Invite! 🎉 (CFF 2025)",
     className: "nav-special",
     addDivider: true,
     condition: () => hasQueryParam("plushie", "true"),
