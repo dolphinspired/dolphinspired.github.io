@@ -47,6 +47,12 @@ const navTiles: NavTileConfig[] = [
     label: "@dolphinspired on Telegram",
   },
   {
+    name: "Discord",
+    href: "https://discord.com/users/263732939815256064",
+    image: cdn("site/logo/discord.png"),
+    label: "@dolphinspired on Discord",
+  },
+  {
     name: "Toyhouse",
     href: "https://toyhou.se/25234327.nuffle-emberdrake",
     image: cdn("site/logo/toyhouse.png"),
