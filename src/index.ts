@@ -1,9 +1,10 @@
 import { getNextAvatar, getRandomAvatar } from "./components/avatars";
 import { renderNavTiles } from "./components/nav";
-import { storeQueryParams } from "./components/qstr";
+import { clearQueryParam, getQueryParam, storeQueryParams } from "./components/qstr";
 
 const onload = () => {
   storeQueryParams();
+  const metrics = (window as any).umami;
 
   const navTilesContainer = document.getElementById("navTiles");
   if (navTilesContainer) {
@@ -24,7 +25,17 @@ const onload = () => {
           console.error("Error playing sound:", error);
         });
       }
+
+      if (metrics) {
+        metrics.track("avatar-squeaked");
+      }
     };
+  }
+
+  const queryParamFrom = getQueryParam("from");
+  if (metrics && queryParamFrom) {
+    metrics.track(`from.${queryParamFrom}`);
+    clearQueryParam("from");
   }
 }
 

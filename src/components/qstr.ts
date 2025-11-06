@@ -4,9 +4,12 @@ export const getQueryParam = (key: string): string | null => {
 
 export const hasQueryParam = (key: string, value?: string): boolean => {
   const param = getQueryParam(key);
-  console.log(`Query param ${key} = ${param}`);
   if (!param) return false;
   return value === undefined ? true : param === value;
+}
+
+export const clearQueryParam = (key: string): void => {
+  localStorage.removeItem(`queryParam_${key}`);
 }
 
 // Once the document has loaded, store the query parameters in localStorage
